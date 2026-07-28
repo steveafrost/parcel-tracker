@@ -1,8 +1,8 @@
-import cron from 'node-cron';
+import cron, { type ScheduledTask } from 'node-cron';
 import { EmailPoller, PollerConfig } from './email-poller';
 
 export class Scheduler {
-  private task: cron.ScheduledTask | null = null;
+  private task: ScheduledTask | null = null;
 
   constructor(private poller: EmailPoller) {}
 
